@@ -1,208 +1,185 @@
-/* styles.css */
-
-/* General Styles */
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f0f8f0;
+    color: #333;
 }
 
-/* Header Styles */
+/* Header styles */
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: white;
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Recipe Title */
-#recipe-title {
-    font-family: 'Georgia', serif;
+header h1 {
+    margin: 0;
     font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Recipe Sections */
-.recipe {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid #2E865F;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation styling */
 nav {
     text-align: center;
     margin: 20px 0;
+    padding: 10px;
 }
 
 /* Recipe card styling */
 .recipe-card {
     background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ingredients */
-.ingredients {
-    font-family: 'Courier New', monospace;
-    font-size: 1.2em;
-    margin: 15px 0;
-    margin-top: 10px;
-    list-style-type: none;
-    padding: 0;
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Steps */
-.steps {
-    font-family: 'Verdana', sans-serif;
-    font-size: 1em;
-    margin: 15px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f7f7f7;
+.recipe-card h3 {
+    color: #2E7D32;
+    margin-top: 0;
+    font-size: 1.5em;
 }
 
-/* Button Styles */
+/* Button styling */
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Link Styles */
-a {
-    color: #2E865F;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #333;
-}
-
-/* Combinator Selector Example */
-.ingredients li {
-    margin: 5px 0;
-}
-
-/* Recipe submission button styles */
-/* Remove default anchor text decoration and set display */
-.submit-recipe-button {
-    text-decoration: none;
-    display: inline-block;
-    margin: 20px 0;
-}
-
-/* Style the button inside the anchor tag */
-.submit-recipe-button button {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: white;
     padding: 12px 24px;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 25px;
     cursor: pointer;
-    /* Add smooth transition for hover effects */
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #45a049 0%, #388E3C 100%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Ingredients list styling */
+.ingredients {
+    background-color: #f9f9f9;
+    border-left: 4px solid #4CAF50;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
     transition: all 0.3s ease;
 }
 
-/* Hover effects for enhanced user interaction */
-.submit-recipe-button button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.ingredients li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
 }
 
-/* Recipe form container styles */
+.ingredients li::before {
+    content: "•";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+/* Form styling */
 .recipe-form {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Form group styles for consistent spacing */
 .form-group {
     margin-bottom: 20px;
 }
 
-/* Label styles for form elements */
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #2E7D32;
     font-weight: bold;
 }
 
-/* Input and textarea styles */
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Allow vertical resizing for textareas */
-.form-group textarea {
-    resize: vertical;
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    outline: none;
 }
 
-/* Submit button styles */
-.submit-button {
-    background-color: #4CAF50;
+/* Footer styling */
+footer {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-/* Hover effects for submit button */
-.submit-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-/* Back button styles */
+/* Back button styling */
 .back-button {
     display: inline-block;
     margin-top: 20px;
-    color: #666;
+    color: #4CAF50;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Hover effects for back button */
 .back-button:hover {
-    color: #333;
+    color: #2E7D32;
     text-decoration: underline;
+}
+
+/* Animation for recipe cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.recipe-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .recipe-card {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+    }
 }
