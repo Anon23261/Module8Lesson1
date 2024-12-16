@@ -3,34 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Recipe</title>
+    <title>Submit Your Recipe</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <!-- Header section -->
     <header>
         <h1>Submit Your Recipe</h1>
     </header>
+
+    <!-- Main content section containing the form -->
     <main class="recipe-form">
-        <form id="recipe-submission-form">
+        <!-- Recipe submission form -->
+        <form id="recipe-submission-form" action="#" method="POST">
+            <!-- Recipe Name Field -->
             <div class="form-group">
                 <label for="recipe-name">Recipe Name:</label>
-                <input type="text" id="recipe-name" name="recipe-name" required>
+                <input type="text" id="recipe-name" name="recipe-name" required 
+                       placeholder="Enter the name of your recipe">
             </div>
+
+            <!-- Ingredients Field -->
             <div class="form-group">
                 <label for="ingredients">Ingredients:</label>
-                <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+                <textarea id="ingredients" name="ingredients" rows="5" required
+                          placeholder="List your ingredients (one per line)"></textarea>
             </div>
+
+            <!-- Instructions Field -->
             <div class="form-group">
-                <label for="instructions">Instructions:</label>
-                <textarea id="instructions" name="instructions" rows="8" required></textarea>
+                <label for="instructions">Cooking Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="8" required
+                          placeholder="Write the step-by-step instructions"></textarea>
             </div>
+
+            <!-- Preparation Time Field -->
             <div class="form-group">
                 <label for="prep-time">Preparation Time (minutes):</label>
-                <input type="number" id="prep-time" name="prep-time" min="1" required>
+                <input type="number" id="prep-time" name="prep-time" min="1" required
+                       placeholder="Enter preparation time in minutes">
             </div>
-            <button type="submit" class="submit-button">Submit Recipe</button>
+
+            <!-- Cooking Time Field -->
+            <div class="form-group">
+                <label for="cook-time">Cooking Time (minutes):</label>
+                <input type="number" id="cook-time" name="cook-time" min="1" required
+                       placeholder="Enter cooking time in minutes">
+            </div>
+
+            <!-- Difficulty Level Field -->
+            <div class="form-group">
+                <label for="difficulty">Difficulty Level:</label>
+                <select id="difficulty" name="difficulty" required>
+                    <option value="">Select difficulty level</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="submit-button">Submit Recipe</button>
+            </div>
         </form>
+
+        <!-- Back to Home Link -->
         <a href="index.html" class="back-button">Back to Recipes</a>
     </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Recipe Collection. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for form validation and interaction -->
+    <script>
+        // Form validation
+        document.getElementById('recipe-submission-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Basic form validation
+            const recipeName = document.getElementById('recipe-name').value;
+            const ingredients = document.getElementById('ingredients').value;
+            const instructions = document.getElementById('instructions').value;
+            
+            if (recipeName.trim() === '' || ingredients.trim() === '' || instructions.trim() === '') {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // If validation passes, you would typically submit the form to a server here
+            alert('Recipe submitted successfully!');
+            this.reset(); // Reset form after submission
+        });
+    </script>
 </body>
 </html>
