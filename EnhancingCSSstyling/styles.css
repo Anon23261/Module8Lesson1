@@ -1,0 +1,208 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Recipe Title */
+#recipe-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Recipe Sections */
+.recipe {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #2E865F;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styling */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Recipe card styling */
+.recipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ingredients */
+.ingredients {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    margin: 15px 0;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Steps */
+.steps {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1em;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Link Styles */
+a {
+    color: #2E865F;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+/* Combinator Selector Example */
+.ingredients li {
+    margin: 5px 0;
+}
+
+/* Recipe submission button styles */
+/* Remove default anchor text decoration and set display */
+.submit-recipe-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+/* Style the button inside the anchor tag */
+.submit-recipe-button button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Add smooth transition for hover effects */
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for enhanced user interaction */
+.submit-recipe-button button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Recipe form container styles */
+.recipe-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form group styles for consistent spacing */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styles for form elements */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input and textarea styles */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Allow vertical resizing for textareas */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit button styles */
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for submit button */
+.submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Back button styles */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    color: #666;
+    text-decoration: none;
+}
+
+/* Hover effects for back button */
+.back-button:hover {
+    color: #333;
+    text-decoration: underline;
+}

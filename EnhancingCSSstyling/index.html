@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="recipe-title">Recipe Collection</h1>
+    </header>
+    
+    <nav>
+        <a href="submit-recipe.html" class="submit-recipe-button">
+            <button type="button">Submit New Recipe</button>
+        </a>
+    </nav>
+    
+    <main class="recipe">
+        <section>
+            <h2>Featured Recipes</h2>
+            <div class="recipe-card">
+                <h3>Chocolate Chip Cookies</h3>
+                <button class="toggle-ingredients">Show Ingredients</button>
+                <ul class="ingredients" style="display: none;">
+                    <li>1 cup sugar</li>
+                    <li>2 cups flour</li>
+                    <li>1 cup chocolate chips</li>
+                    <li>1/2 cup butter</li>
+                </ul>
+            </div>
+            <div class="recipe-card">
+                <h3>Spaghetti Carbonara</h3>
+                <button class="toggle-ingredients">Show Ingredients</button>
+                <ul class="ingredients" style="display: none;">
+                    <li>200g spaghetti</li>
+                    <li>100g pancetta</li>
+                    <li>2 eggs</li>
+                    <li>50g parmesan cheese</li>
+                </ul>
+            </div>
+            <div class="recipe-card">
+                <h3>Caesar Salad</h3>
+                <button class="toggle-ingredients">Show Ingredients</button>
+                <ul class="ingredients" style="display: none;">
+                    <li>1 head romaine lettuce</li>
+                    <li>50g parmesan cheese</li>
+                    <li>Caesar dressing</li>
+                    <li>Croutons</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Recipe Collection. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for toggling ingredient visibility
+        document.querySelectorAll('.toggle-ingredients').forEach(button => {
+            button.addEventListener('click', () => {
+                const ingredientsList = button.nextElementSibling;
+                if (ingredientsList.style.display === 'none') {
+                    ingredientsList.style.display = 'block';
+                    button.textContent = 'Hide Ingredients';
+                } else {
+                    ingredientsList.style.display = 'none';
+                    button.textContent = 'Show Ingredients';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
